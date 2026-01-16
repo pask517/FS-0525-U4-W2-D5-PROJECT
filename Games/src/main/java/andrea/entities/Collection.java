@@ -25,7 +25,6 @@ public abstract class Collection {
     }
 
     public static Game getById(int id) {
-
         Game foundGame = gamesList.stream().filter(game -> game.getId() == id).findAny().orElse(null);
         if (foundGame == null) {
             throw new NoSuchElementException("Nessun elemento trovato con id " + id);
